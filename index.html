@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f6f1">
+    <meta name="description" content="Thoughtful everyday finds for a home that feels like yours.">
+    <title>Daywell — good things for every day</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <span>Small things, thoughtfully chosen.</span>
+      <span class="announcement-note">A little more joy in the everyday <span aria-hidden="true">✳</span></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Daywell home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 34 34" fill="none"><path d="M17 3.5c1.7 6.2 3.3 7.8 9.5 9.5-6.2 1.7-7.8 3.3-9.5 9.5-1.7-6.2-3.3-7.8-9.5-9.5 6.2-1.7 7.8-3.3 9.5-9.5Z" fill="currentColor"/><circle cx="26.5" cy="25.5" r="3" fill="currentColor"/></svg>
+        </span>
+        <span>daywell<span class="brand-period">.</span></span>
+      </a>
+      <nav class="app-switcher" aria-label="Application views" role="tablist">
+        <button class="app-tab is-active" id="marketplace-tab" type="button" role="tab" aria-selected="true" aria-controls="marketplace-view" data-view="marketplace" tabindex="0">
+          <span class="app-tab-mark" aria-hidden="true">✳</span><span>Marketplace</span>
+        </button>
+        <button class="app-tab" id="bastion-tab" type="button" role="tab" aria-selected="false" aria-controls="bastion-view" data-view="bastion" tabindex="-1">
+          <span class="app-tab-mark bastion-mark" aria-hidden="true">◈</span><span>Bastion Security</span><span class="tab-demo">DEMO</span>
+        </button>
+      </nav>
+      <button class="cart-trigger" id="open-cart" type="button" aria-haspopup="dialog" aria-controls="cart-dialog">
+        <span class="cart-trigger-label">Your bag</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
+        <span class="cart-count" id="cart-count" aria-label="0 items in your bag">0</span>
+      </button>
+    </header>
+
+    <main>
+      <div class="app-view" id="marketplace-view" role="tabpanel" aria-labelledby="marketplace-tab" tabindex="0">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> THE EVERYDAY EDIT</p>
+          <h1 id="hero-title">A little better,<br><em>every day.</em></h1>
+          <p class="hero-description">Useful, lovely things for the everyday rituals that make a life. Picked with care, made to be lived with.</p>
+          <a class="button button-dark hero-button" href="#shop">Find your everyday <span aria-hidden="true">↗</span></a>
+          <div class="hero-footnote"><span aria-hidden="true">✳</span> Considered goods. Everyday prices.</div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of thoughtfully chosen home and kitchen goods">
+          <div class="hero-sun"></div>
+          <svg class="hero-still-life" viewBox="0 0 540 430" role="img" aria-labelledby="still-life-title">
+            <title id="still-life-title">A mug, a bottle, flowers, and a notebook on a table</title>
+            <ellipse cx="273" cy="366" rx="211" ry="25" fill="#d9b8a6" opacity=".42"/>
+            <path d="M91 305h360l-26 71H116l-25-71Z" fill="#d9a98e"/>
+            <path d="M116 376h310" stroke="#b57e65" stroke-width="5" stroke-linecap="round"/>
+            <path d="M165 305c-13-57-14-92 2-128M172 237c-39-21-46-53-33-76 27 9 44 31 39 61M168 219c15-46 43-59 65-48-2 32-27 53-62 61M168 191c-8-45 8-69 31-76 16 28 8 56-23 81" fill="#547460"/>
+            <path d="M171 301V161" stroke="#405c49" stroke-width="5" stroke-linecap="round"/>
+            <path d="M292 214h72v88h-72z" fill="#f3e5d6"/>
+            <path d="M364 231h14a22 22 0 0 1 0 43h-14" fill="none" stroke="#f3e5d6" stroke-width="13"/>
+            <path d="M304 231h48M304 247h48M304 263h38" stroke="#d4b8a3" stroke-width="3" stroke-linecap="round"/>
+            <path d="M206 248h51v59h-51z" fill="#83988a"/>
+            <path d="M216 234h31v14h-31z" fill="#d7a278"/>
+            <path d="M270 253h-9v12h9M264 263v31c0 8 6 12 13 12h16c7 0 12-4 12-12v-31h-41Z" fill="#c66f52"/>
+            <path d="M272 265h28M272 274h28" stroke="#e9b18f" stroke-width="3" stroke-linecap="round"/>
+            <path d="M368 295c14-25 34-32 58-26l-7 34c-20 11-38 9-51-8Z" fill="#e7cf9f"/>
+            <path d="M382 291h29" stroke="#bda574" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="108" cy="164" r="5" fill="#c66f52"/>
+            <circle cx="421" cy="190" r="4" fill="#c66f52"/>
+            <path d="M419 126v20m-10-10h20" stroke="#c66f52" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="hero-sticker"><span>GOOD<br>THINGS</span><span class="sticker-star" aria-hidden="true">✳</span></div>
+          <p class="hero-art-caption">Everyday, with a little extra care.</p>
+        </div>
+      </section>
+
+      <section class="shop-section" id="shop" aria-labelledby="shop-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> THE GOOD STUFF</p>
+            <h2 id="shop-title">Everyday essentials<span class="heading-period">.</span></h2>
+          </div>
+          <p class="section-aside">The pieces you reach for,<br>and feel good about.</p>
+        </div>
+
+        <div class="shop-tools">
+          <div class="category-list" id="category-list" role="group" aria-label="Filter products by category"></div>
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+            <span class="visually-hidden">Search products</span>
+            <input id="product-search" type="search" placeholder="Find something..." autocomplete="off">
+            <kbd>/</kbd>
+          </label>
+        </div>
+
+        <div class="results-line">
+          <p id="results-label" aria-live="polite"></p>
+          <span class="demo-label"><span></span> Demo collection</span>
+        </div>
+        <div class="storefront-outage" id="storefront-outage" role="status" hidden>
+          <span class="outage-icon" aria-hidden="true">!</span>
+          <span><strong id="outage-title">Demo checkout is unavailable.</strong><span id="outage-copy"> The simulated Payment API host is isolated; browsing and your bag remain available.</span></span>
+          <button type="button" data-view="bastion">Review simulation <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="empty-results" id="empty-results" hidden>
+          <span class="empty-sparkle" aria-hidden="true">✳</span>
+          <h3>No finds just yet.</h3>
+          <p>Try a different search or browse all the good stuff.</p>
+          <button class="text-button" id="clear-filters" type="button">Clear filters <span aria-hidden="true">↗</span></button>
+        </div>
+      </section>
+
+      <section class="values-strip" aria-label="Our values">
+        <div><span class="value-icon" aria-hidden="true">✳</span><span>Made for real life</span></div>
+        <div><span class="value-icon" aria-hidden="true">♡</span><span>Thoughtful by nature</span></div>
+        <div><span class="value-icon" aria-hidden="true">↗</span><span>Good things, no fuss</span></div>
+      </section>
+      </div>
+
+      <section class="app-view bastion-view" id="bastion-view" role="tabpanel" aria-labelledby="bastion-tab" tabindex="0" hidden>
+        <div class="incident-shell">
+          <div class="incident-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> BASTION / INCIDENT BRIEF</p>
+              <div class="incident-title-row">
+                <h1>Billing access anomaly<span class="heading-period">.</span></h1>
+                <span class="incident-state" id="incident-state"><span></span> INVESTIGATING</span>
+              </div>
+              <p class="incident-intro">A synthetic billing-service credential failed twice, then signed in successfully. See how two different responses affect the Daywell marketplace.</p>
+            </div>
+            <div class="incident-id"><span>SIMULATION ID</span><strong>DW-IR-024</strong></div>
+          </div>
+
+          <div class="simulation-banner">
+            <span class="simulation-icon" aria-hidden="true">◈</span>
+            <span><strong>Illustrative simulation</strong> / Local state only. No real action taken. Start at the healthy marketplace, trigger the mock incident, then choose a Bastion response.</span>
+            <span class="simulation-banner-tag">NO BACKEND · NO LIVE SYSTEMS</span>
+          </div>
+
+          <div class="incident-summary" aria-label="Incident summary">
+            <div><span class="summary-label">AFFECTED IDENTITY</span><strong>svc-billing-worker</strong><span>Service credential · synthetic</span></div>
+            <div><span class="summary-label">OBSERVED WINDOW</span><strong>09:14 – 09:22 UTC</strong><span>Illustrative event timeline</span></div>
+            <div><span class="summary-label">MARKETPLACE IMPACT</span><strong id="summary-impact">Checkout reachable</strong><span id="summary-impact-detail">No simulated service interruption</span></div>
+          </div>
+
+          <div class="incident-workspace">
+            <div class="incident-main-column">
+              <section class="ops-panel service-panel" aria-labelledby="service-map-title">
+                <div class="panel-heading">
+                  <div><p class="panel-kicker">01 / SERVICE MODEL</p><h2 id="service-map-title">The application it protects</h2></div>
+                  <span class="model-badge"><span></span> FICTIONAL TOPOLOGY</span>
+                </div>
+                <p class="panel-description">Three modeled services show where customer browsing, checkout, and order records depend on each other.</p>
+                <div class="service-map" id="service-map">
+                  <article class="service-node portal-node" id="portal-node">
+                    <div class="node-topline"><span class="node-icon portal-icon" aria-hidden="true">✳</span><span class="node-status"><i></i><span data-node-status="portal">Available</span></span></div>
+                    <p class="node-type">CUSTOMER-FACING APP</p>
+                    <h3>Customer Portal</h3>
+                    <p class="node-description">Daywell marketplace · product browsing</p>
+                    <button class="node-link" type="button" data-view="marketplace">Open marketplace <span aria-hidden="true">↗</span></button>
+                  </article>
+                  <div class="service-link" id="portal-api-link" aria-label="Customer Portal connects to Payment API"><span>checkout requests</span><i></i></div>
+                  <article class="service-node payment-node" id="payment-node">
+                    <div class="node-topline"><span class="node-icon payment-icon" aria-hidden="true">↗</span><span class="node-status"><i></i><span data-node-status="payment">Reachable</span></span></div>
+                    <p class="node-type">CHECKOUT SERVICE</p>
+                    <h3>Payment API</h3>
+                    <p class="node-description">Supports demo checkout · no payment processing</p>
+                    <span class="node-footnote">HOST · pay-api-01</span>
+                  </article>
+                  <div class="service-link" id="api-ledger-link" aria-label="Payment API writes order records to Ledger Database"><span>order records</span><i></i></div>
+                  <article class="service-node ledger-node" id="ledger-node">
+                    <div class="node-topline"><span class="node-icon ledger-icon" aria-hidden="true">▤</span><span class="node-status"><i></i><span data-node-status="ledger">Available</span></span></div>
+                    <p class="node-type">ORDER RECORDS</p>
+                    <h3>Ledger Database</h3>
+                    <p class="node-description">Stores marketplace order records · modeled</p>
+                    <span class="node-footnote">DATA · order-ledger-01</span>
+                  </article>
+                </div>
+                <div class="map-legend"><span><i class="legend-dot healthy"></i> Available / reachable</span><span><i class="legend-dot contained"></i> Contained in simulation</span></div>
+              </section>
+
+              <section class="ops-panel attack-lab" aria-labelledby="attack-lab-title">
+                <div class="panel-heading">
+                  <div><p class="panel-kicker">CONTROLLED DEMO / LOCAL EVENT GENERATOR</p><h2 id="attack-lab-title">Attack &amp; protection lab</h2></div>
+                  <span class="lab-state" id="lab-state" data-state="ready"><i></i><span>READY TO RUN</span></span>
+                </div>
+                <p class="panel-description">Start with checkout healthy. Generate a short, deterministic credential-abuse scenario against a mock identity; a synthetic billing operation then disrupts checkout. Bastion detects it so you can contain the event and recover.</p>
+                <div class="lab-controls">
+                  <button class="run-attack-button" id="run-simulated-attack" type="button"><span class="run-icon" aria-hidden="true">▶</span><span id="run-attack-label">Run simulated attack</span></button>
+                  <span class="lab-identity"><span class="identity-indicator"></span> TARGET · svc-billing-worker</span>
+                </div>
+                <p class="local-lab-caption">Controlled local simulation — no external systems or real credentials used.</p>
+                <div class="attack-feed-shell">
+                  <div class="attack-feed-heading"><span>LIVE EVENT FEED</span><span id="feed-count">0 EVENTS</span></div>
+                  <ol class="attack-feed" id="attack-feed" aria-live="polite" aria-relevant="additions text">
+                    <li class="feed-empty" id="feed-empty">No lab events yet. Run the simulation to generate a synthetic sequence.</li>
+                  </ol>
+                </div>
+                <p class="detection-summary" id="detection-summary" aria-live="polite"><span class="detection-symbol" aria-hidden="true">◈</span><span id="detection-copy">Bastion detection is waiting for simulated events.</span></p>
+              </section>
+
+              <section class="ops-panel timeline-panel" aria-labelledby="timeline-title">
+                <div class="panel-heading">
+                  <div><p class="panel-kicker">02 / EVIDENCE TRAIL</p><h2 id="timeline-title">Sign-in timeline</h2></div>
+                  <span class="evidence-count">3 SYNTHETIC EVENTS</span>
+                </div>
+                <div class="timeline">
+                  <article class="timeline-event failed-event">
+                    <span class="timeline-marker" aria-hidden="true"></span>
+                    <time datetime="09:14">09:14:03 UTC</time>
+                    <div><h3>Sign-in failed</h3><p>svc-billing-worker · 203.0.113.42</p><a href="#evidence-1">EV-01 · auth-fail-01</a></div>
+                    <span class="event-label">FAILED</span>
+                  </article>
+                  <article class="timeline-event failed-event">
+                    <span class="timeline-marker" aria-hidden="true"></span>
+                    <time datetime="09:16">09:16:51 UTC</time>
+                    <div><h3>Sign-in failed</h3><p>svc-billing-worker · 198.51.100.27</p><a href="#evidence-2">EV-02 · auth-fail-02</a></div>
+                    <span class="event-label">FAILED</span>
+                  </article>
+                  <article class="timeline-event success-event">
+                    <span class="timeline-marker" aria-hidden="true"></span>
+                    <time datetime="09:22">09:22:18 UTC</time>
+                    <div><h3>Sign-in succeeded</h3><p>svc-billing-worker · 198.51.100.27</p><a href="#evidence-3">EV-03 · auth-success-01</a></div>
+                    <span class="event-label">SUCCESS</span>
+                  </article>
+                </div>
+                <p class="timeline-note"><span aria-hidden="true">ⓘ</span> Addresses use documentation-only ranges; all identities and events are fictional.</p>
+              </section>
+            </div>
+
+            <aside class="incident-side-column">
+              <section class="ops-panel evidence-panel" aria-labelledby="evidence-title">
+                <div class="panel-heading">
+                  <div><p class="panel-kicker">03 / SUPPORTING RECORDS</p><h2 id="evidence-title">Evidence references</h2></div>
+                  <span class="evidence-count">LOCAL FIXTURES</span>
+                </div>
+                <p class="panel-description">Traceable references for the synthetic timeline. These are illustrative labels, not collected logs.</p>
+                <div class="evidence-list">
+                  <article class="evidence-item" id="evidence-1"><span class="evidence-type">AUTH</span><div><strong>EV-01 · auth-fail-01</strong><span>Failed credential check · 09:14:03</span></div><span class="evidence-mark">↗</span></article>
+                  <article class="evidence-item" id="evidence-2"><span class="evidence-type">AUTH</span><div><strong>EV-02 · auth-fail-02</strong><span>Failed credential check · 09:16:51</span></div><span class="evidence-mark">↗</span></article>
+                  <article class="evidence-item" id="evidence-3"><span class="evidence-type success-type">AUTH</span><div><strong>EV-03 · auth-success-01</strong><span>Successful sign-in · 09:22:18</span></div><span class="evidence-mark">↗</span></article>
+                  <article class="evidence-item"><span class="evidence-type model-type">MAP</span><div><strong>EV-04 · service-model</strong><span>Customer Portal → Payment API → Ledger</span></div><span class="evidence-mark">↗</span></article>
+                </div>
+                <p class="fixture-note"><span aria-hidden="true">◈</span> Illustrative simulation / No real action taken</p>
+              </section>
+
+              <section class="ops-panel credential-panel" aria-labelledby="credential-title">
+                <div class="credential-heading"><span class="credential-icon" aria-hidden="true">⌁</span><div><p class="panel-kicker">IDENTITY IN SCOPE</p><h2 id="credential-title">svc-billing-worker</h2></div></div>
+                <div class="credential-details"><span>Credential status</span><strong id="credential-status">Active · simulated</strong></div>
+                <div class="credential-details"><span>Requests in this model</span><strong id="credential-requests">Allowed · not exercised</strong></div>
+                <p class="credential-footnote">No credential exists. This status is a visual-only incident scenario.</p>
+              </section>
+            </aside>
+          </div>
+
+          <section class="response-section" aria-labelledby="response-title">
+            <div class="response-heading">
+              <div><p class="panel-kicker">04 / RESPONSE COMPARISON</p><h2 id="response-title">Two choices. Different blast radius.</h2><p>Choose a simulated response to see its modeled impact on Daywell. Neither choice changes the storefront.</p></div>
+              <button class="reset-button" id="reset-simulation" type="button" hidden><span aria-hidden="true">↺</span> Reset simulation</button>
+            </div>
+            <div class="response-cards">
+              <article class="response-card" id="isolate-card">
+                <div class="response-card-top"><span class="response-number">A</span><span class="response-tag">INFRASTRUCTURE CONTAINMENT</span></div>
+                <h3>Isolate Payment API host</h3>
+                <p>Disconnect the modeled payment host to stop all traffic to it, including legitimate checkout requests.</p>
+                <div class="response-effect"><span>Portal browsing</span><strong>Stays available</strong><span>Checkout</span><strong class="effect-down">Remains interrupted</strong></div>
+                <button class="response-button" type="button" data-response="isolate" disabled>Simulate host isolation <span aria-hidden="true">↗</span></button>
+              </article>
+              <article class="response-card" id="revoke-card">
+                <div class="response-card-top"><span class="response-number">B</span><span class="response-tag">IDENTITY CONTAINMENT</span></div>
+                <h3>Revoke billing credential</h3>
+                <p>Block this identity’s requests, clear the simulated service degradation, and restore the customer-facing checkout path.</p>
+                <div class="response-effect"><span>Billing requests</span><strong class="effect-down">Blocked</strong><span>Checkout path</span><strong>Restored</strong></div>
+                <button class="response-button" type="button" data-response="revoke" disabled>Simulate credential revocation <span aria-hidden="true">↗</span></button>
+              </article>
+            </div>
+            <div class="response-outcome" id="response-outcome" aria-live="polite" hidden>
+              <div class="outcome-icon" id="outcome-icon" aria-hidden="true">✓</div>
+              <div class="outcome-copy"><p class="panel-kicker" id="outcome-kicker">SIMULATED RESPONSE</p><h3 id="outcome-title"></h3><p id="outcome-description"></p></div>
+              <span class="outcome-disclaimer">Illustrative simulation<br>No real action taken</span>
+            </div>
+          </section>
+          <p class="incident-disclaimer"><span aria-hidden="true">◈</span> This is a fictional, local-only demonstration. No backend, external requests, payment processing, credential changes, or security actions occur.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#" aria-label="Daywell home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 34 34" fill="none"><path d="M17 3.5c1.7 6.2 3.3 7.8 9.5 9.5-6.2 1.7-7.8 3.3-9.5 9.5-1.7-6.2-3.3-7.8-9.5-9.5 6.2-1.7 7.8-3.3 9.5-9.5Z" fill="currentColor"/><circle cx="26.5" cy="25.5" r="3" fill="currentColor"/></svg></span>
+        <span>daywell<span class="brand-period">.</span></span>
+      </a>
+      <p>Good things for every day.</p>
+      <span class="footer-note">A fictional demo app. All data is simulated.</span>
+    </footer>
+
+    <p class="visually-hidden" id="cart-status" aria-live="polite" aria-atomic="true"></p>
+
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+      <div class="dialog-top">
+        <div><p class="eyebrow"><span class="eyebrow-dot"></span> YOUR GOOD THINGS</p><h2 id="cart-title">Your bag<span class="heading-period">.</span></h2></div>
+        <button class="icon-button" type="button" data-close-dialog="cart-dialog" aria-label="Close your bag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      </div>
+      <div class="cart-content" id="cart-content"></div>
+      <div class="cart-summary" id="cart-summary"></div>
+    </dialog>
+
+    <dialog class="checkout-dialog" id="checkout-dialog" aria-labelledby="checkout-title">
+      <button class="icon-button checkout-close" type="button" data-close-dialog="checkout-dialog" aria-label="Close confirmation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <div class="checkout-confirmation">
+        <span class="confirmation-sparkle" aria-hidden="true">✳</span>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> ALL SET</p>
+        <h2 id="checkout-title">A little joy is<br><em>on its way.</em></h2>
+        <p id="checkout-message">Your demo order is confirmed. No payment was taken and nothing has been sent.</p>
+        <span class="order-number" id="order-number"></span>
+        <button class="button button-dark" type="button" data-close-dialog="checkout-dialog">Back to the good stuff <span aria-hidden="true">↗</span></button>
+      </div>
+    </dialog>
+  </body>
+</html>
