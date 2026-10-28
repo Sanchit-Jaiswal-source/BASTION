@@ -307,10 +307,15 @@ h1, h2, h3, p { margin-top: 0; }
 .values-strip { display: flex; justify-content: center; gap: clamp(38px, 10vw, 145px); padding: 29px 20px; background: #f0ede5; color: #68756a; }
 .values-strip div { display: flex; align-items: center; gap: 9px; font-size: 10px; }
 .value-icon { color: var(--coral); font-size: 17px; }
-.site-footer { min-height: 112px; padding: 25px 8.3%; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; background: var(--ink); color: #f6f3eb; }
+.site-footer { min-height: 112px; padding: 25px 8.3%; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; align-items: center; gap: 18px; background: var(--ink); color: #f6f3eb; }
 .footer-brand { color: #f6f3eb; font-size: 20px; }
 .footer-brand .brand-mark { width: 24px; height: 24px; color: #e28a69; }
 .site-footer p { justify-self: center; margin: 0; color: #d7d9d0; font: italic 12px var(--serif); }
+.footer-about { justify-self: center; }
+.footer-about h2 { margin: 0 0 5px; color: #aeb8af; font-size: 8px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.footer-about a { color: #f6f3eb; font-size: 9px; text-decoration: underline; text-decoration-color: #708276; text-underline-offset: 3px; }
+.footer-about a:hover { color: #e9aa8e; text-decoration-color: currentColor; }
+.footer-about a span { padding-left: 3px; }
 .footer-note { justify-self: end; color: #aeb8af; font-size: 9px; }
 
 dialog { color: var(--ink); }
@@ -414,8 +419,10 @@ dialog::backdrop { background: rgba(31, 45, 37, .42); backdrop-filter: blur(2px)
   .values-strip { gap: 10px; justify-content: space-around; padding: 20px 10px; }
   .values-strip div { gap: 5px; flex-direction: column; text-align: center; font-size: 8px; }
   .value-icon { font-size: 16px; }
-  .site-footer { min-height: 130px; grid-template-columns: 1fr 1fr; gap: 13px; padding: 23px 6%; }
+  .site-footer { min-height: 150px; grid-template-columns: 1fr 1fr; gap: 13px; padding: 23px 6%; }
   .site-footer p { justify-self: end; font-size: 11px; }
+  .footer-about { justify-self: start; }
+  .footer-about a { font-size: 8px; }
   .footer-note { grid-column: 1 / -1; justify-self: start; }
   .cart-dialog { padding: 22px 20px 20px; }
   .incident-shell { padding: 28px 5% 38px; }
