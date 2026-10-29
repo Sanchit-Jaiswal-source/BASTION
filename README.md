@@ -1,26 +1,42 @@
-# Daywell + Bastion
+# BASTION × NOVA Market
 
-A polished, client-side demo that brings the Daywell everyday marketplace and the Bastion security incident view together in one app. Switch between **Marketplace** and **Bastion Security** in the top navigation.
+A single React/Vite demonstration that brings the NOVA Market storefront together with the BASTION five-step digital-twin presentation and a scripted local Scenario Lab. All catalogue, order, incident, service, and audit data stays in browser memory. The app has no backend, payment processor, production integrations, or external security operations.
 
-## Run locally
+## Requirements and run
 
-Open `index.html` in a browser, or serve this folder with any static file server. For example, with Python installed:
+- Node.js 20.19+ or 22.12+
+- npm
 
-```powershell
-python -m http.server 8000
+From this project folder:
+
+```bash
+npm install
+npm run dev
 ```
 
-Then visit `http://localhost:8000`.
+Open the local URL printed by Vite (usually `http://localhost:5173`). Create a production build with `npm run build`.
 
-## Marketplace demo
+## GitHub Pages
 
-- Browse eight fictional sample products, filter by category, and search.
-- Add products to the cart, change quantities, and remove items.
-- Review the cart subtotal and complete a no-payment demo checkout.
-- Product illustrations are embedded in the app.
+The production build is deployed to [the BASTION Pages site](https://sanchit-jaiswal-source.github.io/BASTION/) by `.github/workflows/pages.yml`. After merging this workflow, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**. The build uses the `/BASTION/` base path required by this repository's Pages URL.
 
-## Bastion simulation
+Repository: https://github.com/Sanchit-Jaiswal-source/BASTION
 
-The Bastion view models a synthetic sign-in timeline for `svc-billing-worker` and a simple service graph: **Customer Portal → Payment API → Ledger Database**. The repeatable demo story starts with a healthy marketplace. In the **Attack & protection lab**, a deterministic local sequence of failed mock sign-ins and a synthetic success is followed by a mock billing operation that disrupts checkout. Bastion displays the detection and lets you choose a response. Revoking the synthetic billing credential denies later mock requests and restores the modeled Payment API and checkout; isolating the Payment API host contains requests but leaves checkout unavailable. Both options preserve browsing and the cart. Reset returns the app to its healthy starting state.
+## Feature map
 
-All incident evidence, identities, services, and results are illustrative. The lab caption is **“Controlled local simulation — no external systems or real credentials used.”** Events are generated in page memory; no credentials or secrets are collected or displayed. There is no backend, external request, payment processing, scanning, credential change, or real security action.
+- **NOVA Market** — cinematic storefront introduction; 18 sample products with bundled local product photography; category filters, search and sort; favourites; product details with three-image galleries; quantity controls; cart and subtotal/shipping; delivery validation; demo payment selection; review and confirmation.
+- **Scenario Lab** — three deterministic event generators: synthetic credential-abuse burst, local checkout/request-surge summaries, and invented suspicious-order records. Events are visible in the shared local incident timeline. The Lab generates events only; it is not the defense actor.
+- **BASTION Security** — the original welcome scene and five-step presentation: briefing/timeline, service topology, response comparison, and simulated outcome. Operators can select and explicitly apply a Bastion-owned response to the seeded scenario. The model updates service/operation availability and writes a Bastion-attributed audit event.
+- **Shared service twin** — NOVA Customer Portal / Storefront → Payment API / Checkout → Ledger / Order Records. Scenario state, service health, selected and applied response, and audit history are shared across Lab, Security, and Market views. Applying host isolation keeps product browsing and the cart available but disables demo checkout until reset; credential revocation, rate limiting, and order review preserve checkout availability as shown by their modeled outcomes.
+
+## Safe simulation scope
+
+**LOCAL SIMULATION ONLY — no external systems or real credentials used.** Scenario generators create fixed mock events in local application state. They do not generate network traffic, submit requests, scan targets, run commands, access real credentials, process payments, or read or change real orders. The marketplace checkout is a front-end demonstration; delivery details remain in memory and are never sent to a server. Scenario response options are operator-approved, deterministic examples; they demonstrate effects in this local model only and do not claim production protection or universal incident-response efficacy.
+
+Reset in Scenario Lab returns the incident, services, selected response, and audit state to baseline. Replay a scenario to seed its events again.
+
+## Local assets and accessibility
+
+- `public/assets/products/` contains the NOVA product images bundled for offline use.
+- NOVA's original visual language is scoped to the marketplace surface; BASTION retains its own dark, cinematic interface.
+- Both interfaces support keyboard focus and reduced-motion preferences. Product galleries can be operated with the arrow keys while open; Escape closes the detail view.
